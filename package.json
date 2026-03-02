@@ -1,0 +1,20 @@
+{
+  "name": "projectmanagement",
+  "version": "1.0.0",
+  "description": "A project management application ",
+  "keywords": [
+    "backend",
+    "API",
+    "creation"
+  ],
+  "license": "ISC",
+  "author": "chandrashekhar",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "3.8.1"
+  }
+}
