@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import cookieParser from "cookie-parser";
 const app = express();
 
 //default config for app
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); // this is for a
 
 app.use(express.static("public")) // for using file present in public 
 
+app.use(cookieParser());
 
 
 //this is cors config
@@ -39,5 +41,10 @@ app.get('/dude', (req, res) => {
 import healthCheckRouter from "./routes/healthcheck.routes.js"
 
 app.use("/api/v1/healthcheck", healthCheckRouter);
+
+import authrouter from "./routes/auth.route.js"
+
+app.use("/api/v1/auth", authrouter);
+
 
 export default app
